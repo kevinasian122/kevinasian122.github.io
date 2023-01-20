@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kevinasian122.github.io/,/static/css/main.556a74e4.css",
-    "main.js": "/kevinasian122.github.io/,/static/js/main.1bf7928e.js",
-    "static/media/temppfp.png": "/kevinasian122.github.io/,/static/media/temppfp.f8b36297262eec64db61.png",
-    "index.html": "/kevinasian122.github.io/,/index.html",
-    "main.556a74e4.css.map": "/kevinasian122.github.io/,/static/css/main.556a74e4.css.map",
-    "main.1bf7928e.js.map": "/kevinasian122.github.io/,/static/js/main.1bf7928e.js.map"
+    "main.css": "/static/css/main.556a74e4.css",
+    "main.js": "/static/js/main.f10c0a14.js",
+    "static/media/temppfp.png": "/static/media/temppfp.f8b36297262eec64db61.png",
+    "index.html": "/index.html",
+    "main.556a74e4.css.map": "/static/css/main.556a74e4.css.map",
+    "main.f10c0a14.js.map": "/static/js/main.f10c0a14.js.map"
   },
   "entrypoints": [
     "static/css/main.556a74e4.css",
-    "static/js/main.1bf7928e.js"
+    "static/js/main.f10c0a14.js"
   ]
 }

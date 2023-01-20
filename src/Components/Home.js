@@ -7,8 +7,7 @@ const Home = () => {
             <div className="bio">
                 <div className='text'>
                     <div className="header">
-                        <div className="hi">Hi, I'm </div>
-                        <div className="name">Kevin</div>
+                        <div className="hi">Hi, I'm <span style={{'color':'#f1356d', }}>Kevin</span></div>
                     </div>
                     <div className="bodytext">
                         A budding programmer and a first-year computer science student at the University of Waterloo

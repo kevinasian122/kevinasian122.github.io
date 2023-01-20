@@ -2,6 +2,7 @@
 *{
   padding:0;
   margin:0;
+  Font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 .home {
   display:flex;
@@ -10,9 +11,9 @@
   align-items: center;
   justify-content: center;
   /*for moving gradient */
-  background: linear-gradient(-45deg, #8BC6EC, #97D9E1, #D9AFD9, #9599E2);
+  background: linear-gradient(-45deg, #43C6AC,#191654 );
 	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	animation: gradient 6s ease infinite;
 	height: 100vh;
 }
 
@@ -33,6 +34,7 @@
 }
 .text{
   width:20vw;
+  color:white;
 }
 .bodytext{
   width:20vw;
@@ -50,22 +52,35 @@
   margin-bottom: 30px;
   
 }
-.header>.name{
-  font-size: 35px;
-  padding-left: 10px;
-  font-weight: bold;
-  color: #f1356d;
-  border-bottom:2px solid #f1356d;
-}
+
 .header>.hi{
-  font-size: 35px;
+  font-size: 3rem;
   font-weight: bold;
-  border-bottom:2px solid #f1356d;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid antiquewhite; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .06em; /* Adjust as needed */
+  animation: 
+    typing 2s steps(40, end),
+    blink-caret .75s step-end infinite;
 }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 90% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: antiquewhite; }
+}
+
 /*navbar*/
 a{
   text-decoration: none;
-  color: black;
+  color:black;
+  
   font-size:22px;
   padding:25px;
 
@@ -73,8 +88,11 @@ a{
 .navbar a:hover{
   color: #f1356d;
   box-shadow: 1px 3px 5px gray;
+  font-weight: bold;
 }
 .navbar {
+  width:100%;
+  background-color: rgb(208, 195, 177);
     display:flex;
     align-items: center;
     justify-content:center;
@@ -82,6 +100,7 @@ a{
     padding: 0 125px;
     position:sticky;
     top:0;
+    z-index:10;
 }
 
 
@@ -101,12 +120,78 @@ a{
 .body{
   height:200vh;
   width: 100vw;
-  
+  background-color: antiquewhite;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
 }
 
 /* foodmark */
 .foodmark{
+  position: relative;
   height: 60vh;
-  width:100vw;
-  background-color: rgb(212, 203, 203);
+  width:60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight:bold;
+  
+  
+}
+.foodmarkcontent{
+  width: 80%;
+  text-align: center;
+  transition: .3s;
+  transform: translateY(1em);
+  padding-top:3%;
+}
+.foodmarkpic {
+  width: auto;
+  height: 100%;
+  border-radius:25px;
+  box-shadow: 3.0px 6.1px 6.1px hsl(0deg 0% 0% / 0.41);
+}
+.foodmarkdescription{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  color:white;
+  transition: opacity .2s, visibility .2s;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 3%;
+  gap:2%;
+  
+}
+.foodmark:hover img.foodmarkpic{
+  opacity: 50%;
+  -webkit-filter: brightness(30%);
+}
+.foodmark:hover .foodmarkdescription {
+  visibility: visible;
+  opacity: 1;
+}
+.foodmark:hover .foodmarkcontent {
+  transform: translateY(0);
+}
+
+.foodmarkcontent>a{
+  padding:0;
+  margin:0;
+  color:white;
+}
+.foodmarkcontent>p{
+  
+  font-size: 2rem;
+}
+.fmgithub{
+  font-size: 2rem;
 }
